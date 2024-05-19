@@ -1,0 +1,25 @@
+#layout_library {
+  .create-container(@width_val, @height_val) {
+    width: @width_val;
+    height: @height_val;
+  }
+
+  .flex-basic-layout(@direction: row, @justify-content:center, @align-items: center) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify-content;
+    align-items: @align-items;
+  }
+
+  .grid-column-layout(@template: 1fr 1fr, @place-items: center) {
+    display: grid;
+    grid-template-columns: @template;
+    place-items: @place-items;
+  }
+
+  .grid-row-layout(@template: 1fr 1fr, @place-items: center) {
+    display: grid;
+    grid-template-rows: @template;
+    place-items: @place-items;
+  }
+}
