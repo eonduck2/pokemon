@@ -1,0 +1,67 @@
+@import "./modules/mixIns.less";
+@import "./modules/vars.less";
+@import "./modules/layout.less";
+
+body {
+  background-color: rgb(81, 155, 224);
+  overflow-x: @body-overflow;
+  .layout100;
+}
+
+#root:extend(body) {
+  #layout-library > .flex-basic-layout(column);
+
+  .contents-header {
+    #layout-library > .create-container(100%,10%);
+    #layout-library > .flex-basic-layout();
+    > picture:first-child {
+      img:first-child {
+        #layout-library > .create-container(100%,10%);
+      }
+    }
+  }
+
+  .contents-body {
+    #layout-library > .create-container(80%,90%);
+    #layout-library > .grid-column-layout(repeat(5, 1fr));;
+    grid-gap: 20px;
+
+    .poke-box {
+      #layout-library > .create-container(100%,20vh);
+
+      background-color: @poke-box-bg;
+      border-radius: @main-border-radius;
+      #layout-library > .flex-basic-layout(column);
+
+      div:first-child {
+        #layout-library > .create-container(100%,80%);
+        #layout-library > .flex-basic-layout();
+      }
+      div:nth-child(2) {
+        #layout-library > .create-container(100%,10%);
+        #layout-library > .flex-basic-layout();
+        span {
+          -webkit-text-stroke: 1px #7017ff;
+        }
+      }
+    }
+  }
+
+  .more-button {
+    #layout-library > .create-container(60%,5vh);
+    font-family: "DungGeunMo";
+    font-size: 2.5rem;
+    letter-spacing: 20px;
+    background-color: rgba(255, 48, 48, 0.877);
+    color: wheat;
+    border: none;
+    outline: none;
+    border-radius: @main-border-radius;
+    cursor: pointer;
+  }
+
+  .more-button:hover {
+    background-color: rgba(224, 22, 22, 0.877);
+    color: rgb(231, 204, 154);
+  }
+}
