@@ -1,11 +1,11 @@
-var gulp = require("gulp");
-var less = require("gulp-less");
+const gulp = require("gulp");
+const less = require("gulp-less");
 
-gulp.task("less", function () {
+gulp.task("less", () => {
   return gulp.src("./style.less").pipe(less()).pipe(gulp.dest("../CSS/"));
 });
 
-gulp.task("watch", function () {
+gulp.task("watch", () => {
   gulp.watch("./*.less", gulp.series("less"));
 });
 

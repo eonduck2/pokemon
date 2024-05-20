@@ -1,5 +1,119 @@
-body {
-  background-color: red;
+.layout10 {
+  width: 10%;
+  height: 10%;
+}
+.layout20 {
+  width: 20%;
+  height: 20%;
+}
+.layout30 {
+  width: 30%;
+  height: 30%;
+}
+.layout40 {
+  width: 40%;
+  height: 40%;
+}
+.layout50 {
+  width: 50%;
+  height: 50%;
+}
+.layout60 {
+  width: 60%;
+  height: 60%;
+}
+.layout70 {
+  width: 70%;
+  height: 70%;
+}
+.layout80 {
+  width: 80%;
+  height: 80%;
+}
+.layout90 {
+  width: 90%;
+  height: 90%;
+}
+.layout100 {
   width: 100%;
   height: 100%;
+}
+body,
+#root {
+  background-color: #519be0;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#root .contents-header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#root .contents-header > picture:first-child img:first-child {
+  width: 100%;
+  height: 10%;
+}
+#root .contents-body {
+  width: 80%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+  grid-gap: 20px;
+}
+#root .contents-body .poke-box {
+  width: 100%;
+  height: 20vh;
+  background-color: white;
+  border-radius: 0.4375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#root .contents-body .poke-box div:first-child {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#root .contents-body .poke-box div:nth-child(2) {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#root .contents-body .poke-box div:nth-child(2) span {
+  -webkit-text-stroke: 1px #7017ff;
+}
+#root .more-button {
+  width: 60%;
+  height: 5vh;
+  font-family: "DungGeunMo";
+  font-size: 2.5rem;
+  letter-spacing: 20px;
+  background-color: rgba(255, 48, 48, 0.877);
+  color: wheat;
+  border: none;
+  outline: none;
+  border-radius: 0.4375rem;
+  cursor: pointer;
+}
+#root .more-button:hover {
+  background-color: rgba(224, 22, 22, 0.877);
+  color: #e7cc9a;
 }
